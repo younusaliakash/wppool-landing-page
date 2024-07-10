@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Fonts */
+@font-face {
+  font-family: "Nantes";
+  src: url("Nantes-Bold.eot");
+  src: local("Nantes Bold"), local("Nantes-Bold"),
+    url("Nantes-Bold.eot?#iefix") format("embedded-opentype"),
+    url("Nantes-Bold.woff2") format("woff2"),
+    url("Nantes-Bold.woff") format("woff"),
+    url("Nantes-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: url("Nantes-Light.eot");
+  src: local("Nantes Light"), local("Nantes-Light"),
+    url("Nantes-Light.eot?#iefix") format("embedded-opentype"),
+    url("Nantes-Light.woff2") format("woff2"),
+    url("Nantes-Light.woff") format("woff"),
+    url("Nantes-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: url("Nantes-LightItalic.eot");
+  src: local("Nantes Light Italic"), local("Nantes-LightItalic"),
+    url("Nantes-LightItalic.eot?#iefix") format("embedded-opentype"),
+    url("Nantes-LightItalic.woff2") format("woff2"),
+    url("Nantes-LightItalic.woff") format("woff"),
+    url("Nantes-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: url("Nantes-Regular.eot");
+  src: local("Nantes Regular"), local("Nantes-Regular"),
+    url("Nantes-Regular.eot?#iefix") format("embedded-opentype"),
+    url("Nantes-Regular.woff2") format("woff2"),
+    url("Nantes-Regular.woff") format("woff"),
+    url("Nantes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: url("/assets/fonts/Nantes-BoldItalic.eot");
+  src: local("/assets/fonts/Nantes Bold Italic"), local("Nantes-BoldItalic"),
+    url("/assets/fonts/Nantes-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/Nantes-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/Nantes-BoldItalic.woff") format("woff"),
+    url("/assets/fonts/Nantes-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: url("Nantes-RegularItalic.eot");
+  src: local("Nantes Regular Italic"), local("Nantes-RegularItalic"),
+    url("Nantes-RegularItalic.eot?#iefix") format("embedded-opentype"),
+    url("Nantes-RegularItalic.woff2") format("woff2"),
+    url("Nantes-RegularItalic.woff") format("woff"),
+    url("Nantes-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+/* *---------* */
+
+@font-face {
+  font-family: "Messina Sans Book";
+  src: url("MessinaSans-Book.eot");
+  src: local("Messina Sans Book"), local("MessinaSans-Book"),
+    url("MessinaSans-Book.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-Book.woff2") format("woff2"),
+    url("MessinaSans-Book.woff") format("woff"),
+    url("MessinaSans-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-BlackItalic.eot");
+  src: local("Messina Sans Black Italic"), local("MessinaSans-BlackItalic"),
+    url("MessinaSans-BlackItalic.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-BlackItalic.woff2") format("woff2"),
+    url("MessinaSans-BlackItalic.woff") format("woff"),
+    url("MessinaSans-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-SemiBold.eot");
+  src: local("Messina Sans SemiBold"), local("MessinaSans-SemiBold"),
+    url("MessinaSans-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-SemiBold.woff2") format("woff2"),
+    url("MessinaSans-SemiBold.woff") format("woff"),
+    url("MessinaSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-Black.eot");
+  src: local("Messina Sans Black"), local("MessinaSans-Black"),
+    url("MessinaSans-Black.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-Black.woff2") format("woff2"),
+    url("MessinaSans-Black.woff") format("woff"),
+    url("MessinaSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-Bold.eot");
+  src: local("Messina Sans Bold"), local("MessinaSans-Bold"),
+    url("MessinaSans-Bold.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-Bold.woff2") format("woff2"),
+    url("MessinaSans-Bold.woff") format("woff"),
+    url("MessinaSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-SemiBoldItalic.eot");
+  src: local("Messina Sans SemiBold Italic"),
+    local("MessinaSans-SemiBoldItalic"),
+    url("MessinaSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-SemiBoldItalic.woff2") format("woff2"),
+    url("MessinaSans-SemiBoldItalic.woff") format("woff"),
+    url("MessinaSans-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-Regular.eot");
+  src: local("Messina Sans Regular"), local("MessinaSans-Regular"),
+    url("MessinaSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-Regular.woff2") format("woff2"),
+    url("MessinaSans-Regular.woff") format("woff"),
+    url("MessinaSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-LightItalic.eot");
+  src: local("Messina Sans Light Italic"), local("MessinaSans-LightItalic"),
+    url("MessinaSans-LightItalic.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-LightItalic.woff2") format("woff2"),
+    url("MessinaSans-LightItalic.woff") format("woff"),
+    url("MessinaSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-BoldItalic.eot");
+  src: local("Messina Sans Bold Italic"), local("MessinaSans-BoldItalic"),
+    url("MessinaSans-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-BoldItalic.woff2") format("woff2"),
+    url("MessinaSans-BoldItalic.woff") format("woff"),
+    url("MessinaSans-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Messina Sans Book";
+  src: url("MessinaSans-BookItalic.eot");
+  src: local("Messina Sans Book Italic"), local("MessinaSans-BookItalic"),
+    url("MessinaSans-BookItalic.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-BookItalic.woff2") format("woff2"),
+    url("MessinaSans-BookItalic.woff") format("woff"),
+    url("MessinaSans-BookItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("MessinaSans-RegularItalic.eot");
+  src: local("Messina Sans Regular Italic"), local("MessinaSans-RegularItalic"),
+    url("MessinaSans-RegularItalic.eot?#iefix") format("embedded-opentype"),
+    url("MessinaSans-RegularItalic.woff2") format("woff2"),
+    url("MessinaSans-RegularItalic.woff") format("woff"),
+    url("MessinaSans-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: url("/assets/fonts/MessinaSans-Light.eot");
+  src: local("/assets/fonts/Messina Sans Light"), local("MessinaSans-Light"),
+    url("/assets/fonts/MessinaSans-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/MessinaSans-Light.woff2") format("woff2"),
+    url("/assets/fonts/MessinaSans-Light.woff") format("woff"),
+    url("/assets/fonts/MessinaSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+/* end Fonts */
+body {
+    max-width: 100vw;
+}
+
+/* Header Style Start*/
+header {
+  background-color: #2042b6;
+  min-height: 100vh;
+}
+header .logo {
+  width: 200px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 30px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+nav.nav.active {
+    background: #f3f3f3;
+}
+header nav ul {
+  list-style: none;
+}
+header .nav .header_link .menu_link {
+  display: flex;
+}
+header .nav .header_link .menu_link li:first-child {
+  height: 42px;
+  width: 42px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header .nav .header_link .menu_link li:nth-child(2) {
+  width: 182px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+header .nav .header_link .menu_link li:nth-child(2) button {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 0 17px;
+  cursor: pointer;
+}
+
+header .nav .header_link .menu_link li:not(:first-child) {
+  margin-left: 20px;
+}
+header .nav .header_link .menu_link .share_icon {
+  height: 14px;
+  width: 14px;
+}
+header .nav .header_link .menu_link li:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .nav .header_link .menu_link .hamburger_menu {
+  width: 20px;
+  cursor: pointer;
+}
+header .nav .toggle_on {
+  position: relative;
+  z-index: 99;
+}
+header .nav .header_link .toggle_menu_link {
+    opacity: 0;
+}
+/* if toggle is on  start*/
+header .nav .toggle_on .menu_link li:first-child {
+  border: 1px solid #afcd80;
+  background: #afcd80;
+  transition: all 0.5s ease-in-out; 
+}
+header .nav .toggle_on .menu_link li:nth-child(2) {
+  background: #2042b6;
+  border: 1px solid #2042b6;
+  transition: all 0.5s ease-in-out; 
+}
+header .nav .toggle_on .toggle_menu_link {
+  position: absolute;
+  background: #fff;
+  padding: 100px 30px 30px 30px;
+  width: 338px;
+  height: 500px;
+  border-radius: 17px;
+  top: -29px;
+  right: -28px;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out; 
+}
+header .nav .toggle_on .toggle_menu_link li {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+header .nav .toggle_on .toggle_menu_link li a {
+  color: #191618;
+  text-decoration: none;
+  font-family: Messina Sans;
+}
+/* if toggle is on  end*/
+header .hero {
+  background-image: url("/assets/images/dots.png");
+  /* background: linear-gradient(45deg, #2c3a47ad, #2c3a47ad),url("/assets/images/dots.png"); */
+  background-size: cover;
+  background-size: 549px 542px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 90vh;
+} 
+header .hero .hero_title_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+} 
+header .hero_title_wrapper .hero_title {
+    text-align: center;
+}
+header .hero_title_wrapper .hero_title h1 {
+    font-family: Nantes;
+    font-size: 78px;
+    color: #fff;
+    
+}
+header .hero_title_wrapper .hero_title p {
+    font-size: 21px;
+    color: #fff;
+}
+
+/* header .hero .bg_rect {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+header .hero .bg_rect img {
+    position: absolute;
+    width: 491px;
+}
