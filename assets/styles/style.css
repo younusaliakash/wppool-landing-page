@@ -225,7 +225,7 @@
 }
 /* end Fonts */
 body {
-    max-width: 100vw;
+  max-width: 100vw;
 }
 
 /* Header Style Start*/
@@ -240,13 +240,14 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  padding: 30px;
+  padding: 15px 30px 15px 30px;
   width: 100%;
   position: fixed;
   z-index: 99;
 }
 nav.nav.active {
-    background: #f3f3f3;
+  background: #f3f3f3;
+  padding: 15px 30px 15px 30px;
 }
 header nav ul {
   list-style: none;
@@ -264,6 +265,10 @@ header .nav .header_link .menu_link li:first-child {
   align-items: center;
   cursor: pointer;
 }
+header .nav.active .header_link .menu_link li:first-child {
+  border: 1px solid #afcd80;
+  background: transparent;
+}
 header .nav .header_link .menu_link li:nth-child(2) {
   width: 182px;
   display: flex;
@@ -272,6 +277,9 @@ header .nav .header_link .menu_link li:nth-child(2) {
   border: 1px solid #fff;
   border-radius: 20px;
   cursor: pointer;
+}
+header .nav.active .header_link .menu_link li:nth-child(2) {
+  border: 1px solid #115cd9;
 }
 header .nav .header_link .menu_link li:nth-child(2) button {
   background: transparent;
@@ -282,6 +290,9 @@ header .nav .header_link .menu_link li:nth-child(2) button {
   line-height: 17px;
   padding: 0 17px;
   cursor: pointer;
+}
+header .nav.active .header_link .menu_link li:nth-child(2) button {
+  color: #191618;
 }
 
 header .nav .header_link .menu_link li:not(:first-child) {
@@ -305,20 +316,30 @@ header .nav .toggle_on {
   z-index: 99;
 }
 header .nav .header_link .toggle_menu_link {
-    opacity: 0;
+  opacity: 0;
+}
+/* change it soon */
+header .nav.active .header_link .toggle_menu_link {
+  opacity: 0;
+  display: none;
 }
 /* if toggle is on  start*/
-header .nav .toggle_on .menu_link li:first-child {
+header .nav .toggle_on .menu_link li:first-child,
+header .nav.active .toggle_on .menu_link li:first-child {
   border: 1px solid #afcd80;
   background: #afcd80;
-  transition: all 0.5s ease-in-out; 
+  transition: all 0.5s ease-in-out;
 }
 header .nav .toggle_on .menu_link li:nth-child(2) {
   background: #2042b6;
   border: 1px solid #2042b6;
-  transition: all 0.5s ease-in-out; 
+  transition: all 0.5s ease-in-out;
 }
-header .nav .toggle_on .toggle_menu_link {
+header .nav.active .toggle_on .menu_link li:nth-child(2) button {
+  color: #fff;
+}
+header .nav .toggle_on .toggle_menu_link,
+header .nav.active .toggle_on .toggle_menu_link {
   position: absolute;
   background: #fff;
   padding: 100px 30px 30px 30px;
@@ -329,8 +350,10 @@ header .nav .toggle_on .toggle_menu_link {
   right: -28px;
   z-index: -1;
   opacity: 1;
-  transition: opacity 0.7s ease-in-out; 
+  display: block;
+  transition: opacity 0.5s ease-in-out;
 }
+
 header .nav .toggle_on .toggle_menu_link li {
   font-size: 18px;
   margin-bottom: 25px;
@@ -341,43 +364,68 @@ header .nav .toggle_on .toggle_menu_link li a {
   font-family: Messina Sans;
 }
 /* if toggle is on  end*/
-header .hero {
-  background-image: url("/assets/images/dots.png");
-  /* background: linear-gradient(45deg, #2c3a47ad, #2c3a47ad),url("/assets/images/dots.png"); */
-  background-size: cover;
-  background-size: 549px 542px;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  height: 90vh;
-} 
-header .hero .hero_title_wrapper {
+header .dot_image_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .hero img.dot {
+  filter: brightness(0.3);
+  opacity: 0.7;
+  width: 480px;
+}
+header .hero .reactangle_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .reactangle {
+  width: 506px;
+  height: 448px;
+}
+header .hero .hero_title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .hero .hero_title h1 {
+  font-size: 78px;
+  color: #fff;
+}
+header .hero .hero_title p {
+  margin-top: 10px;
+  font-size: 21px;
+  color: #fff;
+}
+header .hero .hero_stats {
+  position: absolute;
+  left: 30px;
+  bottom: 45px;
+}
+header .hero .hero_stats .stats_info {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-} 
-header .hero_title_wrapper .hero_title {
-    text-align: center;
-}
-header .hero_title_wrapper .hero_title h1 {
-    font-family: Nantes;
-    font-size: 78px;
+    flex-direction: column;
     color: #fff;
-    
+    gap: 45px;
 }
-header .hero_title_wrapper .hero_title p {
-    font-size: 21px;
-    color: #fff;
+header .hero .hero_stats .stats_info h6 {
+    font-size: 36px;
+}
+header .hero .hero_stats .stats_info p {
+    font-size: 16px;
 }
 
-/* header .hero .bg_rect {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 header .hero .bg_rect img {
-    position: absolute;
-    width: 491px;
+  position: absolute;
+  width: 491px;
+}
+
+main {
+  min-height: 400vh;
+  background: green;
 }
