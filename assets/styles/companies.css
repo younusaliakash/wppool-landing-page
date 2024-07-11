@@ -1,0 +1,27 @@
+.portfolio_companies {
+  background: #ededed;
+  padding: 80px 85px 50px 85px;
+}
+.portfolio_companies .section_title h2 {
+  font-size: 48px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #191618;
+}
+.portfolio_companies .portfolio_companies_info {
+    margin-top: 40px;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+.portfolio_companies .company_name_with_logo {
+    background: #fff;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio_companies .company_name_with_logo img {
+    width: 180px;
+}
