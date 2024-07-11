@@ -1,6 +1,6 @@
 .stories_and_ideas {
   background: #ededed;
-  padding: 0px 85px 0 85px;
+  padding: 0px 85px 0px 85px;
 }
 .stories_and_ideas .section_title h2 {
   font-size: 48px;
@@ -75,9 +75,6 @@
   border: none;
   cursor: pointer;
 }
-.stories_and_ideas .section_separate_line {
-  margin-top: 100px;
-  height: 1px;
-  width: 100%;
-  background: #90b8f0;
-}
+/* .stories_and_ideas .section_separate_line {
+ margin-top: 100px;
+} */

@@ -1,0 +1,58 @@
+.about_wppool {
+  background: #ededed;
+  padding: 80px 85px 0 85px;
+}
+.about_wppool .about_wppool_wrapper {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about_wppool .about_wppool_wrapper .about_info {
+  padding: 75px 0 75px 70px;
+}
+.about_wppool .about_info h2 {
+    font-size: 48px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #191618;
+  margin-bottom: 8px;
+    
+}
+.about_wppool .about_info h3 {
+    font-size: 30px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #7D7F81;
+  margin-bottom: 15px;
+}
+.about_wppool .about_info p {
+  font-size: 18px;
+  font-family: Messina Sans;
+  font-weight: 380;
+  color: #191618;
+}
+.about_wppool .about_info p span {
+    text-decoration: underline;
+}
+.about_wppool .about_info .action_btn button {
+    margin-top: 30px;
+    border: 1px solid #2042B6;
+    outline: none;
+    background: #2042B6;
+    color: #fff;
+    width: 167px;
+    height: 47px;
+    font-size: 16px;
+    font-family: Messina Sans;
+    font-weight: 400;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 24px 36px 0px rgba(0, 0, 0, 0.25);
+
+
+}
+.about_wppool .cover_image img {
+    width: 523px;
+}
