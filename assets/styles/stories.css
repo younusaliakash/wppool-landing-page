@@ -1,0 +1,83 @@
+.stories_and_ideas {
+  background: #ededed;
+  padding: 0px 85px 0 85px;
+}
+.stories_and_ideas .section_title h2 {
+  font-size: 48px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #191618;
+}
+.stories_and_ideas .section_title p {
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: Messina Sans;
+  font-weight: 350;
+  color: #191618;
+}
+.stories_and_ideas .stories_part {
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 18px;
+  grid-row-gap: 90px;
+}
+.stories_and_ideas .stories_part .story_card {
+  background: #fff;
+  border-radius: 8px;
+  height: 220px;
+  position: relative;
+}
+.stories_and_ideas .story_card .story_card_picture {
+  position: absolute;
+  top: -45px;
+  left: 15px;
+}
+.stories_and_ideas .story_card .story_card_picture img {
+  height: 120px;
+  width: 120px;
+  box-shadow: 0px 16px 12px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+}
+.stories_and_ideas .story_card .story_content {
+  margin-top: 80px;
+  padding: 15px 40px 15px 15px;
+}
+.stories_and_ideas .story_card .story_content h4 {
+  font-size: 16px;
+  font-family: Messina Sans;
+  font-weight: 400;
+  color: #2042b6;
+}
+
+.stories_and_ideas .story_card .story_content p {
+  margin-top: 3px;
+  font-size: 18px;
+  font-family: Nantes;
+  font-weight: 530;
+  color: #191618;
+}
+.stories_and_ideas .story_card .card_button {
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+}
+.stories_and_ideas .story_card .card_button button {
+  height: 30px;
+  width: 93px;
+  background: #2042b6;
+  border-radius: 15px;
+  color: #fff;
+  font-family: "Neue Haas Unica W1G";
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.stories_and_ideas .section_separate_line {
+  margin-top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #90b8f0;
+}

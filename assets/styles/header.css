@@ -1,210 +1,218 @@
 header {
-    background-color: #2042b6;
-    min-height: 100vh;
-  }
-  header .logo {
-    width: 200px;
-  }
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding: 15px 30px 15px 30px;
-    width: 100%;
-    position: fixed;
-    z-index: 99;
-  }
-  nav.nav.active {
-    background: #f3f3f3;
-    padding: 15px 30px 15px 30px;
-  }
-  header nav ul {
-    list-style: none;
-  }
-  header .nav .header_link .menu_link {
-    display: flex;
-  }
-  header .nav .header_link .menu_link li:first-child {
-    height: 42px;
-    width: 42px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  header .nav.active .header_link .menu_link li:first-child {
-    border: 1px solid #afcd80;
-    background: transparent;
-  }
-  header .nav .header_link .menu_link li:nth-child(2) {
-    width: 182px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  header .nav.active .header_link .menu_link li:nth-child(2) {
-    border: 1px solid #115cd9;
-  }
-  header .nav .header_link .menu_link li:nth-child(2) button {
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #fff;
-    font-size: 12px;
-    line-height: 17px;
-    padding: 0 17px;
-    cursor: pointer;
-  }
-  header .nav.active .header_link .menu_link li:nth-child(2) button {
-    color: #191618;
-  }
-  
-  header .nav .header_link .menu_link li:not(:first-child) {
-    margin-left: 20px;
-  }
-  header .nav .header_link .menu_link .share_icon {
-    height: 14px;
-    width: 14px;
-  }
-  header .nav .header_link .menu_link li:nth-child(3) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  header .nav .header_link .menu_link .hamburger_menu {
-    width: 20px;
-    cursor: pointer;
-  }
-  header .nav .toggle_on {
-    position: relative;
-    z-index: 99;
-  }
-  header .nav .header_link .toggle_menu_link {
-    opacity: 0;
-  }
-  /* change it soon */
-  header .nav.active .header_link .toggle_menu_link {
-    opacity: 0;
-    display: none;
-  }
-  /* if toggle is on  start*/
-  header .nav .toggle_on .menu_link li:first-child,
-  header .nav.active .toggle_on .menu_link li:first-child {
-    border: 1px solid #afcd80;
-    background: #afcd80;
-    transition: all 0.5s ease-in-out;
-  }
-  header .nav .toggle_on .menu_link li:nth-child(2) {
-    background: #2042b6;
-    border: 1px solid #2042b6;
-    transition: all 0.5s ease-in-out;
-  }
-  header .nav.active .toggle_on .menu_link li:nth-child(2) button {
-    color: #fff;
-  }
-  header .nav .toggle_on .toggle_menu_link,
-  header .nav.active .toggle_on .toggle_menu_link {
-    position: absolute;
-    background: #fff;
-    padding: 100px 30px 30px 30px;
-    width: 338px;
-    height: 500px;
-    border-radius: 17px;
-    top: -14px;
-    right: -28px;
-    z-index: -1;
-    opacity: 1;
-    display: block;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  header .nav .toggle_on .toggle_menu_link li {
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-  header .nav .toggle_on .toggle_menu_link li a {
-    color: #191618;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: Messina Sans;
-    font-weight: 380;
-  }
-  header .nav .toggle_on .toggle_menu_link li:last-child a {
-    color: #2042B6;
-    font-size: 21px;
-    font-weight: 400;
-  }
-  /* if toggle is on  end*/
-  header .dot_image_wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  header .hero img.dot {
-    filter: brightness(0.3);
-    opacity: 0.7;
-    width: 480px;
-  }
-  header .hero .reactangle_wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  header .reactangle {
-    width: 506px;
-    height: 448px;
-  }
-  header .hero .hero_title {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  header .hero .hero_title h1 {
-    font-size: 78px;
-    font-family: Nantes;
-    font-weight: 400;
-    color: #fff;
-  }
-  header .hero .hero_title p {
-    margin-top: 10px;
-    font-size: 21px;
-    font-family: Messina Sans;
-    font-weight: 300;
-    color: #fff;
-  }
-  header .hero .hero_stats {
-    position: absolute;
-    left: 30px;
-    bottom: 45px;
-  }
-  header .hero .hero_stats .stats_info {
-      display: flex;
-      flex-direction: column;
-      color: #fff;
-      gap: 45px;
-  }
-  header .hero .hero_stats .stats_info h6 {
-      font-size: 36px;
-      font-family: Nantes;
-    font-weight: 400;
-  }
-  header .hero .hero_stats .stats_info p {
-      font-size: 16px;
-      font-family: "Neue Haas Unica W1G";
-      color: #CDCDCD;
-  
-  }
-  header .hero .bg_rect img {
-    position: absolute;
-    width: 491px;
-  }
+  background-color: #2042b6;
+  min-height: 100vh;
+}
+header .logo {
+  width: 200px;
+}
+header nav {
+  width: 100%;
+  padding: 15px 30px 15px 30px;
+  position: fixed;
+  z-index: 99;
+}
+header nav .nav_inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  max-width: 1340px;
+}
+nav.nav.active {
+  background: #f3f3f3;
+  padding: 15px 30px 15px 30px;
+}
+header nav ul {
+  list-style: none;
+}
+header .nav .header_link .menu_link {
+  display: flex;
+}
+header .nav .header_link .menu_link li:first-child {
+  height: 42px;
+  width: 42px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header .nav.active .header_link .menu_link li:first-child {
+  border: 1px solid #afcd80;
+  background: transparent;
+}
+header .nav .header_link .menu_link li:nth-child(2) {
+  width: 182px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+header .nav.active .header_link .menu_link li:nth-child(2) {
+  border: 1px solid #115cd9;
+}
+header .nav .header_link .menu_link li:nth-child(2) button {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 0 17px;
+  cursor: pointer;
+}
+header .nav.active .header_link .menu_link li:nth-child(2) button {
+  color: #191618;
+}
+
+header .nav .header_link .menu_link li:not(:first-child) {
+  margin-left: 20px;
+}
+header .nav .header_link .menu_link .share_icon {
+  height: 14px;
+  width: 14px;
+}
+header .nav .header_link .menu_link li:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .nav .header_link .menu_link .hamburger_menu {
+  width: 20px;
+  cursor: pointer;
+}
+header .nav .toggle_on {
+  position: relative;
+  z-index: 99;
+}
+header .nav .header_link .toggle_menu_link {
+  opacity: 0;
+}
+/* change it soon */
+header .nav.active .header_link .toggle_menu_link {
+  opacity: 0;
+  display: none;
+}
+/* if toggle is on  start*/
+header .nav .toggle_on .menu_link li:first-child,
+header .nav.active .toggle_on .menu_link li:first-child {
+  border: 1px solid #afcd80;
+  background: #afcd80;
+  transition: all 0.5s ease-in-out;
+}
+header .nav .toggle_on .menu_link li:nth-child(2) {
+  background: #2042b6;
+  border: 1px solid #2042b6;
+  transition: all 0.5s ease-in-out;
+}
+header .nav.active .toggle_on .menu_link li:nth-child(2) button {
+  color: #fff;
+}
+header .nav .toggle_on .toggle_menu_link,
+header .nav.active .toggle_on .toggle_menu_link {
+  position: absolute;
+  background: #fff;
+  padding: 100px 30px 30px 30px;
+  width: 338px;
+  height: 500px;
+  border-radius: 17px;
+  top: -14px;
+  right: -28px;
+  z-index: -1;
+  opacity: 1;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+header .nav .toggle_on .toggle_menu_link li {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+header .nav .toggle_on .toggle_menu_link li a {
+  color: #191618;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Messina Sans;
+  font-weight: 380;
+}
+header .nav .toggle_on .toggle_menu_link li:last-child a {
+  color: #2042b6;
+  font-size: 21px;
+  font-weight: 400;
+}
+/* if toggle is on  end*/
+header .hero {
+  position: relative;
+  height: 95vh;
+   /* this 2 line added for container and box */
+}
+header .dot_image_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .hero img.dot {
+  filter: brightness(0.3);
+  opacity: 0.7;
+  width: 480px;
+}
+header .hero .reactangle_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .reactangle {
+  width: 506px;
+  height: 448px;
+}
+header .hero .hero_title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .hero .hero_title h1 {
+  font-size: 78px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #fff;
+}
+header .hero .hero_title p {
+  margin-top: 10px;
+  font-size: 21px;
+  font-family: Messina Sans;
+  font-weight: 300;
+  color: #fff;
+}
+header .hero .hero_stats {
+  position: absolute;
+  left: 30px;
+  bottom: 45px;
+}
+header .hero .hero_stats .stats_info {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 45px;
+}
+header .hero .hero_stats .stats_info h6 {
+  font-size: 36px;
+  font-family: Nantes;
+  font-weight: 400;
+}
+header .hero .hero_stats .stats_info p {
+  font-size: 16px;
+  font-family: "Neue Haas Unica W1G";
+  color: #cdcdcd;
+}
+header .hero .bg_rect img {
+  position: absolute;
+  width: 491px;
+}
