@@ -1,0 +1,36 @@
+.payment_companies {
+  background: #ededed;
+  padding: 150px 85px 50px 85px;
+}
+.payment_companies .section_title h2 {
+  font-size: 48px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #191618;
+  margin-bottom: 5px;
+}
+.payment_companies .section_title p {
+  max-width: 880px;
+  font-size: 16px;
+  font-family: Messina Sans;
+  font-weight: 350;
+  color: #191618;
+  line-height: 1.5;
+}
+.payment_companies .payment_companies_info {
+    margin-top: 20px;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+.payment_companies .company_name_with_logo {
+    background: #fff;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.payment_companies .company_name_with_logo img {
+    width: 140px;
+}

@@ -23,7 +23,7 @@ toggleBtn.addEventListener("click", () => {
 window.addEventListener('scroll', fixNav);
 
 function fixNav() {
-    if (window.scrollY > nav.offsetHeight + 300) {
+    if (window.scrollY > nav.offsetHeight - 70) {
         nav.classList.add('active')
         brandLogo.src = '/assets/images/brand_logo_black.png'
         if (!headerLink.classList.contains('toggle_on')) {
