@@ -1,8 +1,11 @@
+.wppool_index {
+  background-color: #fff;
+}
 .wppool_index .index_box {
-  padding: 20px 20px 20px 20px;
+  padding: 60px 20px 20px 20px;
   display: flex;
   align-items: start;
-  justify-content: start;
+  justify-content: space-between;
 }
 .wppool_index aside {
   background: #eff3f6;
@@ -25,21 +28,37 @@
   font-weight: 400;
   color: #647888;
   cursor: pointer;
+  border-radius: 8px;
   padding: 8px;
   margin-bottom: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.wppool_index ul li .single_tab:hover {
+  background: #97a2ab;
+  color: #fff;
+  box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.12);
 }
 .wppool_index ul li.active .single_tab {
   background: #2042b6;
   color: #fff;
   box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
+}
+.wppool_index ul li .single_tab .icon {
+  transition: transform 0.3s ease;
+}
+.wppool_index .main_index {
+  padding: 5px 30px 0 15px;
+  width: 82%;
+}
+.wppool_index .main_index .index_title {
+  margin-bottom: 10px;
 }
 .wppool_index .main_index .title_with_icon {
   display: flex;
   align-items: center;
   justify-content: start;
 }
-
 .wppool_index .main_index .title_with_icon img {
   width: 46px;
   height: 41px;
@@ -58,7 +77,6 @@
 }
 .wppool_index .index_stats_wrapper .stats_box {
   background: #f3f3f3;
-  width: 230px;
   height: 50px;
   padding: 10px;
   border-radius: 10px;
@@ -115,4 +133,135 @@
 }
 .wppool_index .stats_box:nth-child(4) .vr_bar {
   background: #6f34a1;
+}
+.wppool_index .index_option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* stats options */
+.wppool_index .left_part {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.wppool_index .left_part .select:nth-child(1) {
+  margin-right: 10px;
+}
+
+.wppool_index .left_part .select {
+  position: relative;
+  margin-bottom: 15px;
+  width: 178px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  font-family: "Neue Haas Unica W1G";
+  color: #fff;
+  font-weight: 400;
+}
+.wppool_index .left_part .select .selectBtn {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  height: 26px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #2042b6;
+}
+.wppool_index .left_part .select .selectBtn:after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  width: 6px;
+  height: 6px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: 0.2s ease;
+}
+.wppool_index .left_part .select .selectBtn.toggle {
+  border-radius: 3px 3px 0 0;
+}
+.wppool_index .left_part .select .selectBtn.toggle:after {
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
+.wppool_index .left_part .select .selectDropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg1);
+  border-top: 1px solid #eee;
+  z-index: 1;
+  background: #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  visibility: hidden;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+.wppool_index .left_part .select .selectDropdown .option {
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #000;
+}
+.wppool_index .left_part .select .selectDropdown .option:hover {
+  background: #5271da;
+  border-radius: 10px;
+  color: #fff;
+}
+.wppool_index .left_part .select .selectDropdown.toggle {
+  visibility: visible;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+/* Durations options */
+.wppool_index .right_part ul {
+  height: 30px;
+  width: 232px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: #eff3f6;
+  border-radius: 20px;
+}
+.wppool_index .right_part ul li {
+  width: 36px;
+  margin: 0 1.5px;
+  font-size: 13px;
+  font-family: "Neue Haas Unica W1G";
+  color: #748da1;
+  font-weight: 400;
+  height: 24px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: background 0.3s ease-in-out;
+}
+.wppool_index .right_part ul li:hover {
+  cursor: pointer;
+  background: #6180e6;
+  color: #ffffff;
+}
+.wppool_index .right_part ul li.active {
+  background: #2042b6;
+  color: #ffffff;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.12);
 }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/assets/styles/footer.css" />
     <link rel="stylesheet" href="/assets/styles/allCompaniesReport.css" />
     <link rel="stylesheet" href="/assets/styles/payment_partnar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <title>Home Page</title>
   </head>
   <body>
@@ -157,7 +158,7 @@
                         <div class="icon">+</div>
                       </div>
                     </li>
-                    <li class="tab active">
+                    <li class="tab">
                       <div class="single_tab">
                         <p>The Index Tab Two</p>
                         <div class="icon">+</div>
@@ -235,8 +236,58 @@
                     </div>
                   </div>
                 </div>
-                <div class="index_option"></div>
-                <div class="index_graph"></div>
+                <div class="index_option">
+                  <div class="left_part">
+                    <!-- fist selection option -->
+                    <div class="select">
+                      <div class="selectBtn" data-type="firstOption">
+                        Sectors
+                      </div>
+                      <div class="selectDropdown">
+                        <div class="option" data-type="firstOption">
+                          Sectors
+                        </div>
+                        <div class="option" data-type="secondOption">
+                          Industries
+                        </div>
+                        <div class="option" data-type="thirdOption">
+                          Regions
+                        </div>
+                      </div>
+                    </div>
+                    <!-- second selection option -->
+                    <div class="select">
+                      <div class="selectBtn" data-type="firstOption">
+                        Types of IPO
+                      </div>
+                      <div class="selectDropdown">
+                        <div class="option" data-type="firstOption">
+                          Types of IPO
+                        </div>
+                        <div class="option" data-type="secondOption">
+                          Types of Mergers
+                        </div>
+                        <div class="option" data-type="thirdOption">
+                          Types of Acquisitions
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right_part">
+                    <div class="duration_options">
+                      <ul>
+                        <li id="btn-1year" class="topic">1Y</li>
+                        <li id="btn-2years" class="topic">2Y</li>
+                        <li id="btn-6months" class="topic">6M</li>
+                        <li id="btn-1month" class="topic">1M</li>
+                        <li id="btn-1week" class="topic active">1W</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="index_graph">
+                  <div id="chart"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -798,5 +849,6 @@
     </footer>
 
     <script src="/script.js"></script>
+    <script src="/script/chart.js"></script>
   </body>
 </html>

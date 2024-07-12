@@ -431,3 +431,54 @@ function downloadFile(data, filename) {
         }, 0); 
     }
 }
+
+//
+let index = 1;
+
+const on = (listener, query, fn) => {
+	document.querySelectorAll(query).forEach(item => {
+		item.addEventListener(listener, el => {
+			fn(el);
+		})
+	})
+}
+
+on('click', '.selectBtn', item => {
+	const next = item.target.nextElementSibling;
+	next.classList.toggle('toggle');
+	next.style.zIndex = index++;
+});
+on('click', '.option', item => {
+	item.target.parentElement.classList.remove('toggle');
+
+	const parent = item.target.closest('.select').children[0];
+	parent.setAttribute('data-type', item.target.getAttribute('data-type'));
+	parent.innerText = item.target.innerText;
+})
+
+//tab switching
+document.addEventListener('DOMContentLoaded', function () {
+    var tabs = document.querySelectorAll('.tab');
+
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            // Add active class to the clicked tab
+            this.classList.add('active');
+
+            // Update icons to reflect active state
+            tabs.forEach(function(tab) {
+                var icon = tab.querySelector('.icon');
+                if (tab.classList.contains('active')) {
+                    icon.textContent = '-';
+                } else {
+                    icon.textContent = '+';
+                }
+            });
+        });
+    });
+});

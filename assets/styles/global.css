@@ -16,4 +16,6 @@ body {
   width: 100%;
   background: #90b8f0;
 }
-
+main {
+  background-color: #EDEDED;
+}
