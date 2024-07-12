@@ -1,0 +1,118 @@
+.wppool_index .index_box {
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.wppool_index aside {
+  background: #eff3f6;
+  height: 600px;
+  width: 224px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.wppool_index aside ul {
+  list-style: none;
+}
+.wppool_index ul li .single_tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 36px;
+  font-size: 16px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #647888;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+.wppool_index ul li.active .single_tab {
+  background: #2042b6;
+  color: #fff;
+  box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+.wppool_index .main_index .title_with_icon {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.wppool_index .main_index .title_with_icon img {
+  width: 46px;
+  height: 41px;
+}
+.wppool_index .main_index .title_with_icon h3 {
+  font-size: 36px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #191618;
+}
+.wppool_index .main_index .index_stats_wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.wppool_index .index_stats_wrapper .stats_box {
+  background: #f3f3f3;
+  width: 230px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.wppool_index .index_stats_wrapper .stats_box .stats_item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wppool_index .stats_item h6 {
+  font-size: 30px;
+  font-family: Nantes;
+  font-weight: 400;
+}
+.wppool_index .stats_box:nth-child(1) h6 {
+  color: #fc714d;
+}
+.wppool_index .stats_box:nth-child(2) h6 {
+  color: #615de3;
+}
+.wppool_index .stats_box:nth-child(3) h6 {
+  color: #7ca63a;
+}
+.wppool_index .stats_box:nth-child(4) h6 {
+  color: #6f34a1;
+}
+.wppool_index .stats_item .status_company p {
+  font-size: 12px;
+  font-family: "Neue Haas Unica W1G";
+  font-weight: 500;
+  color: #191618;
+}
+.wppool_index .stats_box .status_company {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: right;
+}
+.wppool_index .stats_box .vr_bar {
+  height: 30px;
+  width: 4px;
+  margin-left: 5px;
+}
+.wppool_index .stats_box:nth-child(1) .vr_bar {
+  background: #fc714d;
+}
+.wppool_index .stats_box:nth-child(2) .vr_bar {
+  background: #615de3;
+}
+.wppool_index .stats_box:nth-child(3) .vr_bar {
+  background: #7ca63a;
+}
+.wppool_index .stats_box:nth-child(4) .vr_bar {
+  background: #6f34a1;
+}
