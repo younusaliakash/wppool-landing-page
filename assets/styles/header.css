@@ -11,7 +11,7 @@ header nav {
   position: fixed;
   z-index: 99;
 }
-header nav .nav_inner{
+header nav .nav_inner {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -147,7 +147,7 @@ header .nav .toggle_on .toggle_menu_link li:last-child a {
 header .hero {
   position: relative;
   height: 95vh;
-   /* this 2 line added for container and box */
+  /* this 2 line added for container and box */
 }
 header .dot_image_wrapper {
   position: absolute;
@@ -215,4 +215,63 @@ header .hero .hero_stats .stats_info p {
 header .hero .bg_rect img {
   position: absolute;
   width: 491px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-top: 8px;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+.header_link.toggle_on .hamburger-top,
+.header_link.toggle_on .hamburger-middle,
+.header_link.toggle_on .hamburger-bottom {
+  background: #000;
+}
+.nav.active .header_link .hamburger-top,
+.nav.active .header_link .hamburger-middle,
+.nav.active .header_link .hamburger-bottom {
+  background: #000;
+}
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
