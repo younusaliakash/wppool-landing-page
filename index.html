@@ -449,6 +449,9 @@
        <section class="image_slider">
         <div class="slider_container container">
           <div class="slider_wrapper">
+            <div class="slider_background">
+              <img src="/assets/images/slider_bg.png" alt="">
+            </div>
             <div class="top_part">
               <div class="title">
                 <h2>State of USA</h2>
@@ -475,6 +478,76 @@
                 <p>Click through the slides or download the report to view natively on your device.</p>
               </div>
             </div>
+            <div class="main_slider">
+              <div class="main_slider_wrapper">
+
+                <!-- Swiper -->
+
+  <div #swiperRef="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/assets/images/slide1.png" alt="slide one">
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/slide2.png" alt="slide two">
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/slide3.png" alt="slide othre">
+      </div>
+      <div class="swiper-slide">
+        <img src="/assets/images/slide1.png" alt="slide four">
+      </div>
+    </div>
+  </div>
+
+  <div class="custom_slider_nav">
+    <div class="nav_and_pagination">
+      <div class="custom-swiper-buttons">
+        <button class="custom-prev-button">
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.92437 7.99881L8.0013 0.921875L8.9449 1.86548L3.47824 7.33214L16.668 7.33214L16.668 8.66548L3.47824 8.66547L8.9449 14.1321L8.0013 15.0757L0.92437 7.99881Z" fill="#2042B6"/>
+            </svg>
+        </button>
+        <button class="custom-next-button">
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.0756 7.99881L8.9987 0.921875L8.0551 1.86548L13.5218 7.33214L0.332032 7.33214L0.332032 8.66548L13.5218 8.66547L8.0551 14.1321L8.9987 15.0757L16.0756 7.99881Z" fill="#2042B6"/>
+            </svg>
+        </button>
+      </div>
+      <div class="custom-pagination">
+        <p>Pages</p>
+        <div class="current_and_next_container">
+          <div class="pagination_stats">
+            <span id="current-slide"></span>
+            <span> and </span>
+            <span id="next-slide"></span>
+            
+          </div>
+          <div class="icon">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.00192 6.53841L0.130188 0.666672H11.8737L6.00192 6.53841Z" fill="#2042B6"/>
+              </svg>
+          </div>
+        </div>
+        <span> of </span>
+        <span id="total-slides"></span>
+    </div>
+    </div>
+    <div class="report_export">
+      <div class="btn_container">
+        <button>Download the 2023 Report</button>
+      </div>
+    </div>
+    
+  </div>
+
+
+  
+
+
+              </div>
+            </div>
+
           </div>
         </div>
        </section>
@@ -891,5 +964,6 @@
 
     <script src="/script.js"></script>
     <script src="/script/chart.js"></script>
+    <script src="/script/slider.js"></script>
   </body>
 </html>
