@@ -1,0 +1,102 @@
+.image_slider {
+  padding: 100px 85px 150px 85px;
+}
+.image_slider .title h2 {
+  font-size: 48px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #191618;
+  margin-bottom: 5px;
+}
+
+/* stats options */
+.slider_wrapper .top_part .select:nth-child(1) {
+  margin-right: 10px;
+}
+
+.slider_wrapper .top_part .select {
+  position: relative;
+  margin-bottom: 15px;
+  width: 200px;
+  border-radius: 35px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 42px;
+  font-family: Nantes;
+  font-weight: 400;
+  color: #fff;
+}
+.slider_wrapper .top_part .select .selectBtn {
+  padding: 5px 20px;
+  box-sizing: border-box;
+  border-radius: 35px;
+  height: 58px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #2042b6;
+}
+.slider_wrapper .top_part .select .selectBtn:after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 28px;
+  width: 6px;
+  height: 6px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: 0.2s ease;
+}
+.slider_wrapper .top_part .select .selectBtn.toggle {
+  border-radius: 3px 3px 0 0;
+}
+.slider_wrapper .top_part .select .selectBtn.toggle:after {
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
+.slider_wrapper .top_part .select .selectDropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg1);
+  border-top: 1px solid #eee;
+  z-index: 1;
+  background: #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  visibility: hidden;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+.slider_wrapper .top_part .select .selectDropdown .option {
+  padding: 5px 5px 5px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #000;
+}
+.slider_wrapper .top_part .select .selectDropdown .option:hover {
+  background: #5271da;
+  border-radius: 35px;
+  color: #fff;
+  padding-left: 20px;
+}
+.slider_wrapper .top_part .select .selectDropdown.toggle {
+  visibility: visible;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.slider_wrapper .top_part p {
+    font-size: 16px;
+    font-family: "Neue Haas Unica W1G";
+    color: #191618;
+    font-weight: 400;
+}
