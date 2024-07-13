@@ -1,37 +1,3 @@
-const toggleBtn = document.getElementById("toggle_btn")
-const nav = document.querySelector('.nav');
-const headerLink = document.querySelector('.header_link');
-const brandLogo = document.getElementById("brandLogo")
-const tableBody = document.querySelector("#companyTable tbody");
-const btn = document.getElementById("menu-btn");
-const navEl = document.getElementById("menu");
-
-
-
-btn.addEventListener('click', (event) => {
-    btn.classList.toggle('open');
-    headerLink.classList.toggle('toggle_on');
-    event.stopPropagation();
-});
-
-document.addEventListener('click', () => {
-    if (btn.classList.contains('open')) {
-        btn.classList.remove('open');
-        headerLink.classList.remove('toggle_on');
-    }
-});
-
-window.addEventListener('scroll', fixNav);
-
-function fixNav() {
-    if (window.scrollY > nav.offsetHeight - 60) {
-        nav.classList.add('active')
-        brandLogo.src = '/assets/images/brand_logo_black.png'
-    } else {
-        nav.classList.remove('active')
-        brandLogo.src = '/assets/images/brand_logo.png'
-    }
-}
 
 const companies = [
     {
@@ -356,6 +322,39 @@ const companies = [
 ];
 
 
+const toggleBtn = document.getElementById("toggle_btn");
+const nav = document.querySelector('.nav');
+const headerLink = document.querySelector('.header_link');
+const brandLogo = document.getElementById("brandLogo");
+const tableBody = document.querySelector("#companyTable tbody");
+const btn = document.getElementById("menu-btn");
+const navEl = document.getElementById("menu");
+
+btn.addEventListener('click', (event) => {
+    btn.classList.toggle('open');
+    headerLink.classList.toggle('toggle_on');
+    event.stopPropagation();
+});
+
+document.addEventListener('click', () => {
+    if (btn.classList.contains('open')) {
+        btn.classList.remove('open');
+        headerLink.classList.remove('toggle_on');
+    }
+});
+
+window.addEventListener('scroll', fixNav);
+
+function fixNav() {
+    if (window.scrollY > nav.offsetHeight - 60) {
+        nav.classList.add('active');
+        brandLogo.src = '/assets/images/brand_logo_black.png';
+    } else {
+        nav.classList.remove('active');
+        brandLogo.src = '/assets/images/brand_logo.png';
+    }
+}
+
 function generateTable(data) {
     tableBody.innerHTML = "";
 
@@ -374,11 +373,14 @@ function generateTable(data) {
 
 function filterTable() {
     const searchInput = document.querySelector("#searchInput").value.toLowerCase();
+    const regex = new RegExp(searchInput, 'i');
+  
     const filteredData = companies.filter(company =>
-        company.Company.toLowerCase().includes(searchInput)
+      regex.test(company.Company.toLowerCase())
     );
     generateTable(filteredData);
-}
+  }
+  
 
 document.addEventListener("DOMContentLoaded", () => {
     generateTable(companies);
@@ -387,18 +389,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // download table csv
-document.getElementById('downloadBtn').addEventListener('click', function () {
-    downloadCSV();
-});
+document.getElementById('downloadBtn').addEventListener('click', downloadCSV);
 
 function downloadCSV() {
-    var csv = [];
-    var rows = document.querySelectorAll("table tr");
+    const csv = [];
+    const rows = document.querySelectorAll("table tr");
 
-    for (var i = 0; i < rows.length; i++) {
-        var row = [], cols = rows[i].querySelectorAll("td, th");
+    for (let i = 0; i < rows.length; i++) {
+        const row = [], cols = rows[i].querySelectorAll("td, th");
 
-        for (var j = 0; j < cols.length; j++)
+        for (let j = 0; j < cols.length; j++)
             row.push(cols[j].innerText);
 
         csv.push(row.join(","));
@@ -408,11 +408,11 @@ function downloadCSV() {
 }
 
 function downloadFile(data, filename) {
-    var file = new Blob([data], { type: 'text/csv' });
+    const file = new Blob([data], { type: 'text/csv' });
     if (window.navigator.msSaveOrOpenBlob) {
         window.navigator.msSaveOrOpenBlob(file, filename);
     } else {
-        var a = document.createElement("a"),
+        const a = document.createElement("a"),
             url = URL.createObjectURL(file);
         a.href = url;
         a.download = filename;
@@ -451,7 +451,7 @@ on('click', '.option', item => {
 
 //tab switching
 document.addEventListener('DOMContentLoaded', function () {
-    var tabs = document.querySelectorAll('.tab');
+    const tabs = document.querySelectorAll('.tab');
 
     tabs.forEach(function (tab) {
         tab.addEventListener('click', function () {
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
 
             tabs.forEach(function (tab) {
-                var icon = tab.querySelector('.icon');
+                const icon = tab.querySelector('.icon');
                 if (tab.classList.contains('active')) {
                     icon.textContent = '-';
                 } else {
@@ -472,3 +472,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
