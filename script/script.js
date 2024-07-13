@@ -2,71 +2,34 @@ const toggleBtn = document.getElementById("toggle_btn")
 const nav = document.querySelector('.nav');
 const headerLink = document.querySelector('.header_link');
 const brandLogo = document.getElementById("brandLogo")
-const shareLogo = document.getElementById("shareLogo");
 const tableBody = document.querySelector("#companyTable tbody");
-
-
-// const hamburgerTop = document.querySelector('.hamburger-top')
-// const hamburgerMiddle = document.querySelector('.hamburger-middle')
-// const hamburgerBottom = document.querySelector('.hamburger-bottom')
+const btn = document.getElementById("menu-btn");
+const navEl = document.getElementById("menu");
 
 
 
+btn.addEventListener('click', (event) => {
+    btn.classList.toggle('open');
+    headerLink.classList.toggle('toggle_on');
+    event.stopPropagation();
+});
 
-
-
-const btn = document.getElementById('menu-btn');
-const navEl = document.getElementById('menu');
-
-btn.addEventListener('click', () => {
-    btn.classList.toggle('open')
-    headerLink.classList.toggle('toggle_on')
-    // navEl.classList.toggle('flex')
-    // navEl.classList.toggle('hidden')
-    // if (headerLink.classList.contains('toggle_on')) {
-    //     toggleBtn.src = '/assets/images/close_black.png';
-    // } else {
-    //     // toggleBtn.src = '/assets/images/hamburger_menu.png';
-    //     if(nav.classList.contains('active')){
-    //         toggleBtn.src = '/assets/svg/hamburger.svg'
-    //     } else {
-    //         toggleBtn.src = '/assets/images/hamburger_menu.png';
-    //     }
-    // }
-})
-
-// toggleBtn.addEventListener("click", () => {
-//     headerLink.classList.toggle('toggle_on')
-
-//     if (headerLink.classList.contains('toggle_on')) {
-//         toggleBtn.src = '/assets/images/close_black.png';
-//     } else {
-//         // toggleBtn.src = '/assets/images/hamburger_menu.png';
-//         if(nav.classList.contains('active')){
-//             toggleBtn.src = '/assets/svg/hamburger.svg'
-//         } else {
-//             toggleBtn.src = '/assets/images/hamburger_menu.png';
-//         }
-//     }
-// })
+document.addEventListener('click', () => {
+    if (btn.classList.contains('open')) {
+        btn.classList.remove('open');
+        headerLink.classList.remove('toggle_on');
+    }
+});
 
 window.addEventListener('scroll', fixNav);
 
 function fixNav() {
-    if (window.scrollY > nav.offsetHeight - 70) {
+    if (window.scrollY > nav.offsetHeight - 60) {
         nav.classList.add('active')
         brandLogo.src = '/assets/images/brand_logo_black.png'
-        if (!headerLink.classList.contains('toggle_on')) {
-            shareLogo.src = '/assets/images/share_black.png'
-            // toggleBtn.src = '/assets/svg/hamburger.svg'
-        }
     } else {
         nav.classList.remove('active')
         brandLogo.src = '/assets/images/brand_logo.png'
-        shareLogo.src = '/assets/images/share.png'
-        // if (!headerLink.classList.contains('toggle_on')) {
-        //     toggleBtn.src = '/assets/images/hamburger_menu.png';
-        // }
     }
 }
 
@@ -411,20 +374,20 @@ function generateTable(data) {
 
 function filterTable() {
     const searchInput = document.querySelector("#searchInput").value.toLowerCase();
-    const filteredData = companies.filter(company => 
+    const filteredData = companies.filter(company =>
         company.Company.toLowerCase().includes(searchInput)
     );
     generateTable(filteredData);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    generateTable(companies); 
+    generateTable(companies);
     document.querySelector("#searchInput").addEventListener("input", filterTable);
 });
 
 
 // download table csv
-document.getElementById('downloadBtn').addEventListener('click', function() {
+document.getElementById('downloadBtn').addEventListener('click', function () {
     downloadCSV();
 });
 
@@ -435,10 +398,10 @@ function downloadCSV() {
     for (var i = 0; i < rows.length; i++) {
         var row = [], cols = rows[i].querySelectorAll("td, th");
 
-        for (var j = 0; j < cols.length; j++) 
+        for (var j = 0; j < cols.length; j++)
             row.push(cols[j].innerText);
 
-        csv.push(row.join(","));        
+        csv.push(row.join(","));
     }
 
     downloadFile(csv.join("\n"), 'All_companies_data.csv');
@@ -450,58 +413,55 @@ function downloadFile(data, filename) {
         window.navigator.msSaveOrOpenBlob(file, filename);
     } else {
         var a = document.createElement("a"),
-                url = URL.createObjectURL(file);
+            url = URL.createObjectURL(file);
         a.href = url;
         a.download = filename;
         document.body.appendChild(a);
         a.click();
-        setTimeout(function() {
+        setTimeout(function () {
             document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);  
-        }, 0); 
+            window.URL.revokeObjectURL(url);
+        }, 0);
     }
 }
 
-//
+// select options
 let index = 1;
 
 const on = (listener, query, fn) => {
-	document.querySelectorAll(query).forEach(item => {
-		item.addEventListener(listener, el => {
-			fn(el);
-		})
-	})
+    document.querySelectorAll(query).forEach(item => {
+        item.addEventListener(listener, el => {
+            fn(el);
+        })
+    })
 }
 
 on('click', '.selectBtn', item => {
-	const next = item.target.nextElementSibling;
-	next.classList.toggle('toggle');
-	next.style.zIndex = index++;
+    const next = item.target.nextElementSibling;
+    next.classList.toggle('toggle');
+    next.style.zIndex = index++;
 });
 on('click', '.option', item => {
-	item.target.parentElement.classList.remove('toggle');
+    item.target.parentElement.classList.remove('toggle');
 
-	const parent = item.target.closest('.select').children[0];
-	parent.setAttribute('data-type', item.target.getAttribute('data-type'));
-	parent.innerText = item.target.innerText;
+    const parent = item.target.closest('.select').children[0];
+    parent.setAttribute('data-type', item.target.getAttribute('data-type'));
+    parent.innerText = item.target.innerText;
 })
 
 //tab switching
 document.addEventListener('DOMContentLoaded', function () {
     var tabs = document.querySelectorAll('.tab');
 
-    tabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-            // Remove active class from all tabs
-            tabs.forEach(function(tab) {
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            tabs.forEach(function (tab) {
                 tab.classList.remove('active');
             });
 
-            // Add active class to the clicked tab
             this.classList.add('active');
 
-            // Update icons to reflect active state
-            tabs.forEach(function(tab) {
+            tabs.forEach(function (tab) {
                 var icon = tab.querySelector('.icon');
                 if (tab.classList.contains('active')) {
                     icon.textContent = '-';

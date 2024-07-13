@@ -10,14 +10,14 @@
   justify-content: space-between;
 }
 .about_wppool .about_wppool_wrapper .about_info {
-  padding: 75px 0 75px 70px;
+  padding: 70px 0 70px 70px;
 }
 .about_wppool .about_info h2 {
     font-size: 48px;
   font-family: Nantes;
   font-weight: 400;
   color: #191618;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
     
 }
 .about_wppool .about_info h3 {
@@ -25,7 +25,7 @@
   font-family: Nantes;
   font-weight: 400;
   color: #7D7F81;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .about_wppool .about_info p {
   font-size: 18px;
@@ -37,7 +37,7 @@
     text-decoration: underline;
 }
 .about_wppool .about_info .action_btn button {
-    margin-top: 30px;
+    margin-top: 25px;
     border: 1px solid #2042B6;
     outline: none;
     background: #2042B6;
