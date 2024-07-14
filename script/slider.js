@@ -1,3 +1,6 @@
+const prevBtn = document.querySelector(".custom-prev-button")
+const nextBtn = document.querySelector(".custom-next-button")
+
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
@@ -9,9 +12,11 @@ var swiper = new Swiper(".mySwiper", {
     on: {
         init: function (swiper) {
             updateCustomPagination(swiper);
+            // updateCustomSliderLeftMargin(swiper);
         },
         slideChange: function (swiper) {
             updateCustomPagination(swiper);
+            // updateCustomSliderLeftMargin(swiper);
         }
     }
 });
@@ -24,4 +29,39 @@ function updateCustomPagination(swiper) {
     document.getElementById('current-slide').textContent = currentIndex;
     document.getElementById('next-slide').textContent = nextIndex;
     document.getElementById('total-slides').textContent = totalSlides;
+}
+
+nextBtn.addEventListener('click', () => {
+    updateCustomSliderLeftMargin()
+})
+prevBtn.addEventListener('click', () => {
+    updateCustomSliderLeftMargin()
+})
+
+
+function updateCustomSliderLeftMargin() {
+    const activeSlideEl = document.querySelector(".mySwiper .swiper-slide-active")
+    const activeNumber = parseInt(activeSlideEl.getAttribute("aria-label").substring(0, 1))
+
+    const slides = document.querySelectorAll('.swiper-slide');
+
+    slides.forEach((slide, index) => {
+        slide.style.marginLeft = '0px';
+    });
+
+    const currentIndex = activeNumber
+    const prevIndex = activeNumber - 1
+    const nextIndex = activeNumber + 1
+
+    console.log("currentIndex:" + currentIndex, "nextIndex:" + nextIndex, "prevIndex:" + prevIndex, "activeIndex:" + (activeNumber + 1))
+
+    if (currentIndex > 2) {
+        console.log("currentIndex:" + currentIndex, "nextIndex:" + nextIndex, "prevIndex:" + prevIndex, "activeIndex:" + (activeNumber + 1))
+        activeSlideEl.style.marginLeft = (currentIndex * 20) + (20 * (currentIndex - 2)) + "px";
+        console.log((currentIndex * 20) + (20 * (currentIndex - 2)) + "px")
+    } else if (currentIndex === 2) {
+        activeSlideEl.style.marginLeft = (currentIndex * 20) + "px";
+    }
+
+
 }

@@ -1,9 +1,12 @@
+section.wppool_slider {
+  position: relative;
+  z-index: 50;
+}
 .image_slider {
-  padding: 100px 85px 190px 85px;
+  padding: 100px 85px 0px 85px;
 }
 .image_slider .slider_wrapper {
   position: relative;
-  z-index: 10;
 }
 .image_slider .slider_background {
   position: absolute;
@@ -25,6 +28,10 @@
 }
 
 /* stats options */
+.options {
+  position: relative;
+  z-index: 40;
+}
 .slider_wrapper .top_part .select:nth-child(1) {
   margin-right: 10px;
 }
@@ -125,93 +132,103 @@
 .main_slider_wrapper .swiper-slide img {
   width: 100%;
   border-radius: 6px;
-  /* box-shadow: 0px 36px 36px 0px rgba(0, 0, 0, 0.12); */
 }
 
 .custom_slider_nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .custom_slider_nav .nav_and_pagination {
-    display: flex;
-    align-items: center;
-    justify-content: start;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 .custom_slider_nav .nav_and_pagination button {
-    border: none;
-    outline: none;
-    height: 56px;
-    width: 56px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0px 36px 36px 0px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
+  border: none;
+  outline: none;
+  height: 56px;
+  width: 56px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 36px 36px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
-.nav_and_pagination  .swiper-button-disabled {
+.nav_and_pagination .swiper-button-disabled {
   background-color: #cccccc !important;
   color: #666666 !important;
   cursor: not-allowed !important;
   box-shadow: 0px 36px 36px 0px rgba(0, 0, 0, 0.12) !important;
 }
 .custom_slider_nav .nav_and_pagination button:nth-child(1) {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 .custom_slider_nav .nav_and_pagination .custom-pagination {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    font-size: 16px;
-    font-family: "Neue Haas Unica W1G";
-    color: #000;
-    font-weight: 400;
-    margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 16px;
+  font-family: "Neue Haas Unica W1G";
+  color: #000;
+  font-weight: 400;
+  margin-left: 30px;
 }
 .nav_and_pagination .custom-pagination p {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .nav_and_pagination .custom-pagination .current_and_next_container {
-    background-color: #fff;
-    height: 56px;
-    width: 131px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    box-shadow: 0px 24px 36px 0px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding: 0 20px;
-    margin-right: 10px;
-
+  background-color: #fff;
+  height: 56px;
+  width: 131px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  box-shadow: 0px 24px 36px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 0 20px;
+  margin-right: 10px;
 }
 .custom-pagination .current_and_next_container .icon {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 .custom-pagination #total-slides {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 .custom_slider_nav .report_export {
-    display: flex;
-    align-items: center;
-    justify-content: end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 .custom_slider_nav .report_export button {
-    outline: none;
-    border: none;
-    height: 56px;
-    width: 240px;
-    background-color: #2042b6;
-    color: #fff;
-    font-size: 16px;
-    font-family: "Neue Haas Unica W1G";
-    font-weight: 400;
-    box-shadow: 0px 24px 36px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    text-align: center;
-    margin-right: 70px;
-    cursor: pointer;
-
+  outline: none;
+  border: none;
+  height: 56px;
+  width: 240px;
+  background-color: #2042b6;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Neue Haas Unica W1G";
+  font-weight: 400;
+  box-shadow: 0px 24px 36px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  text-align: center;
+  margin-right: 70px;
+  cursor: pointer;
 }
 
+/* extra css for extended right side of the slider */
+.slider {
+  padding: 0 0 0 85px;
+  max-width: 1345px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider_custom_btn {
+  position: relative;
+  z-index: 40;
+  padding: 0  85px 0px 85px;
+  margin-bottom: 190px;
+}
