@@ -125,10 +125,10 @@ section.wppool_slider {
 }
 
 /* slider css */
-.main_slider_wrapper .swiper-slide {
+/* .main_slider_wrapper .swiper-slide {
   width: 580px !important;
   height: 326px;
-}
+} */
 .main_slider_wrapper .swiper-slide img {
   width: 100%;
   border-radius: 6px;
@@ -233,12 +233,14 @@ section.wppool_slider {
   margin-bottom: 190px;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 480px) {
+/* Responsive Style */
+@media (min-width: 1200px) {
+  .main_slider_wrapper .swiper-slide {
+    width: 580px !important;
+    height: 326px;
+  }
 }
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .image_slider .title h2 {
     font-size: 45px;
     margin-bottom: 8px;
@@ -246,9 +248,13 @@ section.wppool_slider {
   .slider_wrapper .top_part p {
     font-size: 15px;
   }
+  .image_slider .slider_background {
+    width: 530px;
+  }
+  .slider {
+    padding: 0 85px 0 85px;
+  }
 }
-
-/* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
   .image_slider {
     padding: 50px 40px 0px 40px;
@@ -267,10 +273,9 @@ section.wppool_slider {
     margin-bottom: 15px !important;
   }
   .slider {
-    padding: 0px 0 0 40px;
+    padding: 0px 40px 0 40px;
   }
   .main_slider_wrapper .swiper-slide {
-    width: 450px !important;
     height: 100%;
   }
   .slider_custom_btn {
@@ -301,12 +306,10 @@ section.wppool_slider {
     font-size: 15px;
   }
   .image_slider .slider_background {
-    width: 475px;
+    width: 420px;
     height: 580px;
   }
 }
-
-/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
   .custom_slider_nav {
     align-items: start;
@@ -316,7 +319,6 @@ section.wppool_slider {
     margin-top: 10px;
   }
 }
-/* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .image_slider {
     padding: 50px 20px 0px 20px !important;
@@ -328,7 +330,7 @@ section.wppool_slider {
     margin-bottom: 14px !important;
   }
   .slider {
-    padding: 0px 0 0 20px !important;
+    padding: 0px 20px 0 20px !important;
   }
   .slider_custom_btn {
     padding: 5px 20px 0px 20px !important;

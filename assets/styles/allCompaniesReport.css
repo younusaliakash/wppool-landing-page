@@ -222,11 +222,31 @@ th:nth-child(1) {
   .all_companies_data_container .container_header h2 {
     font-size: 32px !important;
   }
+  .all_companies_data_container .container_header .search_bar {
+    height: 40px !important;
+    padding: 10px !important;
+  }
+  .all_companies_data_container .search_bar img {
+    height: 20px !important;
+    width: 20px !important;
+  }
+  .all_companies_data_container .search_bar input {
+    font-size: 18px !important;
+  }
+  .all_companies_data_container .search_bar input::placeholder {
+    font-size: 18px !important;
+  }
   .all_companies .report_download .report_downloader_wrapper {
     flex-direction: column;
   }
   .all_companies .report_downloader_wrapper button:nth-child(1) {
     margin-right: 0px;
     margin-bottom: 10px;
+  }
+  .all_companies .all_companies_data_table table th {
+    font-size: 12px !important;
+  }
+  .all_companies .all_companies_data_table table td {
+    font-size: 12px !important;
   }
 }

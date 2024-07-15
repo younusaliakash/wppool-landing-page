@@ -132,12 +132,13 @@
   }
   .stories_and_ideas .stories_part {
     grid-template-columns: repeat(1, 1fr) !important;
-    grid-row-gap: 72px;
+    grid-row-gap: 60px;
   }
   .stories_and_ideas .stories_part .story_card {
-    height: 230px !important;
+    height: 210px !important;
   }
   .stories_and_ideas .story_card .story_content p {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400 !important;
   }
 }

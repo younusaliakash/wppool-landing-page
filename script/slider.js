@@ -3,7 +3,7 @@ const nextBtn = document.querySelector(".custom-next-button")
 
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
         nextEl: ".custom-next-button",
@@ -11,7 +11,7 @@ var swiper = new Swiper(".mySwiper", {
     },
     breakpoints: {
         640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
         },
         768: {
@@ -39,8 +39,6 @@ function updateCustomPagination(swiper) {
     var currentIndex = swiper.activeIndex + 1;
     var totalSlides = Math.ceil(swiper.slides.length - swiper.params.slidesPerView + 1);
     var nextIndex = currentIndex < totalSlides ? currentIndex + 1 : 1;
-
-    console.log(window.screen.width)
 
     document.getElementById('current-slide').textContent = currentIndex;
     document.getElementById('next-slide').textContent = nextIndex;
@@ -70,13 +68,16 @@ function updateCustomSliderLeftMargin() {
     const nextIndex = activeNumber + 1
 
     console.log("currentIndex:" + currentIndex, "nextIndex:" + nextIndex, "prevIndex:" + prevIndex, "activeIndex:" + (activeNumber + 1))
+    console.log(window.screen.width)
 
-    if (currentIndex > 2) {
-        console.log("currentIndex:" + currentIndex, "nextIndex:" + nextIndex, "prevIndex:" + prevIndex, "activeIndex:" + (activeNumber + 1))
-        activeSlideEl.style.marginLeft = (currentIndex * 20) + (20 * (currentIndex - 2)) + "px";
-        console.log((currentIndex * 20) + (20 * (currentIndex - 2)) + "px")
-    } else if (currentIndex === 2) {
-        activeSlideEl.style.marginLeft = (currentIndex * 20) + "px";
+    if(window.screen.width > 1200) {
+        if (currentIndex > 2) {
+            console.log("currentIndex:" + currentIndex, "nextIndex:" + nextIndex, "prevIndex:" + prevIndex, "activeIndex:" + (activeNumber + 1))
+            activeSlideEl.style.marginLeft = (currentIndex * 20) + (20 * (currentIndex - 2)) + "px";
+            console.log((currentIndex * 20) + (20 * (currentIndex - 2)) + "px")
+        } else if (currentIndex === 2) {
+            activeSlideEl.style.marginLeft = (currentIndex * 20) + "px";
+        }
     }
 
 

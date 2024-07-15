@@ -168,10 +168,29 @@ footer .social_icon svg:hover path {
   footer {
     padding: 55px 20px 20px 20px !important;
   }
+  footer .footer_top_part .footer_title h3 {
+    font-size: 24px !important;
+  }
   footer .footer_top_part,
   footer .footer_bottom_part {
     flex-direction: column;
   }
+  footer .footer_top_column.second ul li {
+    margin-bottom: 12px !important;
+  }
+  footer .footer_top_column.second ul li a {
+    font-size: 18px;
+  }
+  footer .footer_top_column.third .contact_info h6 {
+    font-size: 18px;
+  }
+  footer .footer_top_column.third .contact_info p {
+    font-size: 15px;
+  }
+  footer .footer_top_column.third .contact_info .line {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
   footer .footer_bottom_part .desclimar {
     font-size: 12px;
     font-weight: 400;
