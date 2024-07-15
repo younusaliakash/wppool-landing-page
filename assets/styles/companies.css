@@ -9,19 +9,83 @@
   color: #191618;
 }
 .portfolio_companies .portfolio_companies_info {
-    margin-top: 40px;
-    display: grid; 
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
 }
 .portfolio_companies .company_name_with_logo {
-    background: #fff;
-    height: 120px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: #fff;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .portfolio_companies .company_name_with_logo img {
-    width: 180px;
+  width: 180px;
+}
+
+/* Responsive Style */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 480px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1100px) {
+  .portfolio_companies .portfolio_companies_info {
+    gap: 16px;
+  }
+  .portfolio_companies .section_title h2 {
+    font-size: 45px;
+  }
+  .portfolio_companies .company_name_with_logo {
+    height: 110px;
+  }
+  .portfolio_companies .company_name_with_logo img {
+    width: 150px;
+  }
+}
+@media (max-width: 1200px) {
+  .portfolio_companies .portfolio_companies_info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .portfolio_companies {
+    padding: 60px 40px 50px 40px;
+  }
+  .portfolio_companies .section_title h2 {
+    font-size: 42px !important;
+  }
+  .portfolio_companies .portfolio_companies_info {
+  }
+  .portfolio_companies .company_name_with_logo {
+    height: 100px !important;
+  }
+  .portfolio_companies .company_name_with_logo img {
+    width: 125px !important;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .portfolio_companies .portfolio_companies_info {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio_companies {
+    padding: 60px 20px 50px 20px !important;
+  }
+  .portfolio_companies .section_title h2 {
+    font-size: 32px !important;
+  }
+  .portfolio_companies .company_name_with_logo {
+    height: 80px !important;
+}
+.portfolio_companies .company_name_with_logo img {
+  width: 95px !important;
+}
 }

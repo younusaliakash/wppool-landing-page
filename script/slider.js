@@ -9,6 +9,20 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".custom-next-button",
         prevEl: ".custom-prev-button",
     },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+    },
     on: {
         init: function (swiper) {
             updateCustomPagination(swiper);
@@ -25,6 +39,8 @@ function updateCustomPagination(swiper) {
     var currentIndex = swiper.activeIndex + 1;
     var totalSlides = Math.ceil(swiper.slides.length - swiper.params.slidesPerView + 1);
     var nextIndex = currentIndex < totalSlides ? currentIndex + 1 : 1;
+
+    console.log(window.screen.width)
 
     document.getElementById('current-slide').textContent = currentIndex;
     document.getElementById('next-slide').textContent = nextIndex;

@@ -187,7 +187,7 @@ header .nav.active .toggle_on .toggle_menu_link {
   opacity: 1;
   display: block;
   transition: opacity 0.5s ease-in-out;
-  box-shadow: rgba(99, 99, 99, .09) 0px 4px 8px 0px
+  box-shadow: rgba(99, 99, 99, 0.09) 0px 4px 8px 0px;
 }
 header .nav.active .toggle_on .toggle_menu_link {
   top: -9px;
@@ -293,7 +293,6 @@ header .hero .down_scroll_btn {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 header .hero .down_scroll_btn button {
   background: transparent;
@@ -303,4 +302,139 @@ header .hero .down_scroll_btn button {
   margin-top: 5px;
 }
 
+/* Responsive Style */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 480px) {
+}
 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1100px) {
+  header {
+    min-height: 700px;
+  }
+  header .hero {
+    height: 670px;
+  }
+  header .hero img.dot {
+    width: 420px;
+  }
+  header .reactangle {
+    width: 450px;
+    height: 380px;
+  }
+  header .hero .hero_title h1 {
+    font-size: 65px;
+  }
+  header .hero .hero_title p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  header .hero .hero_stats .stats_info h6 {
+    font-size: 32px;
+  }
+  header .hero .hero_stats .stats_info p {
+    font-size: 14px;
+  }
+  header .hero .down_scroll_btn {
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  header {
+    min-height: 570px !important;
+  }
+  header .hero {
+    height: 550px !important;
+  }
+  header .hero img.dot {
+    width: 350px !important;
+  }
+  header .reactangle {
+    width: 390px !important;
+    height: 320px !important;
+  }
+  header .hero .hero_title h1 {
+    font-size: 60px !important;
+  }
+  header .hero .hero_title p {
+    margin-top: 3px !important;
+    font-size: 16px !important;
+  }
+  header .hero .hero_stats {
+    bottom: 30px;
+  }
+  header .hero .hero_stats .stats_info {
+    flex-direction: row !important;
+    gap: 40px !important;
+  }
+  header .hero .hero_stats .stats_info h6 {
+    font-size: 30px !important;
+  }
+  header .hero .hero_stats .stats_info p {
+    font-size: 13px !important;
+  }
+  header .hero .down_scroll_btn {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  header {
+    min-height: 540px !important;
+  }
+
+  header .hero {
+    height: 510px !important;
+  }
+
+  header nav {
+    padding: 20px 20px 20px 20px !important;
+    transition: padding 0.3s ease-in-out;
+  }
+  header .logo {
+    margin-top: 10px;
+    width: 150px;
+  }
+  nav.nav.active {
+    padding: 10px 20px 10px 20px !important;
+  }
+  /* header .nav .header_link .menu_link li:first-child, */
+  header .nav .header_link .menu_link li:nth-child(2) {
+    display: none !important;
+  }
+  header .hero .hero_title h1 {
+    font-size: 40px !important;
+  }
+  header .hero .hero_title p {
+    font-size: 11px !important;
+  }
+  header .hero img.dot {
+    width: 260px !important;
+  }
+  header .reactangle {
+    width: 280px !important;
+    height: 241px !important;
+  }
+  header .hero .hero_stats {
+    left: 20px;
+}
+header .hero .hero_stats .stats_info {
+  gap: 18px !important;
+}
+header .hero .hero_stats .stats_info h6 {
+  font-size: 20px !important;
+}
+header .hero .hero_stats .stats_info p {
+  font-size: 10px !important;
+}
+}

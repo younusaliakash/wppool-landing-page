@@ -75,3 +75,69 @@
   border: none;
   cursor: pointer;
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 480px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1100px) {
+  .stories_and_ideas .section_title h2 {
+    font-size: 45px;
+  }
+  .stories_and_ideas .section_title p {
+    margin-top: 4px;
+    font-size: 18px;
+  }
+  .stories_and_ideas .stories_part {
+    margin-top: 80px;
+    grid-column-gap: 15px;
+    grid-row-gap: 85px;
+  }
+}
+@media (max-width: 1200px) {
+  .stories_and_ideas .stories_part .story_card {
+    height: 240px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .stories_and_ideas {
+    padding: 0px 40px 0px 40px;
+  }
+  .stories_and_ideas .section_title h2 {
+    font-size: 42px !important;
+  }
+  .stories_and_ideas .section_title p {
+    margin-top: 2px !important;
+    font-size: 16px !important;
+  }
+  .stories_and_ideas .stories_part {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .stories_and_ideas .stories_part .story_card {
+    height: 250px !important;
+  }
+  .stories_and_ideas .story_card .story_content {
+    padding: 15px 8px 15px 15px !important;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .stories_and_ideas {
+    padding: 0px 20px 0px 20px !important;
+  }
+  .stories_and_ideas .stories_part {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-row-gap: 72px;
+  }
+  .stories_and_ideas .stories_part .story_card {
+    height: 230px !important;
+  }
+  .stories_and_ideas .story_card .story_content p {
+    font-size: 16px;
+  }
+}
