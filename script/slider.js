@@ -26,11 +26,9 @@ var swiper = new Swiper(".mySwiper", {
     on: {
         init: function (swiper) {
             updateCustomPagination(swiper);
-            // updateCustomSliderLeftMargin(swiper);
         },
         slideChange: function (swiper) {
             updateCustomPagination(swiper);
-            // updateCustomSliderLeftMargin(swiper);
         }
     }
 });

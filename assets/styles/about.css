@@ -59,11 +59,7 @@
 }
 
 /* Responsive Style */
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 480px) {
-}
 
-/* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1100px) {
   .about_wppool .about_wppool_wrapper .about_info {
     padding: 50px 0 50px 50px;
@@ -94,7 +90,7 @@
     height: 100%;
   }
 }
-/* Large devices (desktops, 992px and up) */
+
 @media (max-width: 992px) {
   .about_wppool {
     padding: 80px 40px 0 40px;
@@ -112,35 +108,46 @@
     height: 100%;
   }
 }
-/* Medium devices (tablets, 768px and up) */
+
 @media (max-width: 768px) {
   .about_wppool .about_wppool_wrapper .about_info {
     padding: 30px 0 30px 30px !important;
     width: 130% !important;
   }
 }
-/* Small devices (landscape phones, 576px and up) */
+
 @media (max-width: 576px) {
   .about_wppool {
     padding: 60px 20px 0 20px;
   }
+  .about_wppool .about_wppool_wrapper {
+    flex-direction: column !important;
+  }
+  .about_wppool .about_wppool_wrapper .about_info {
+    padding: 30px 30px 30px 30px !important;
+    width: 100% !important;
+    order: 2;
+  }
+  .about_wppool .cover_image {
+    height: 100% !important;
+    object-fit: cover !important;
+    order: 1;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
   .about_wppool .about_info h2 {
     font-size: 32px !important;
-}
-.about_wppool .about_info h3 {
-  font-size: 20px !important;
-  margin-bottom: 8px !important;
-}
-.about_wppool .about_info p {
-  font-size: 14px !important;
-}
-.about_wppool .about_info .action_btn button {
-  margin-top: 16px !important;
-  height: 38px !important;
-  font-size: 14px !important;
-}
-.about_wppool .cover_image {
-  height: 514px !important;
-  object-fit: cover !important;
-}
+  }
+  .about_wppool .about_info h3 {
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+  }
+  .about_wppool .about_info p {
+    font-size: 14px !important;
+  }
+  .about_wppool .about_info .action_btn button {
+    margin-top: 16px !important;
+    height: 38px !important;
+    font-size: 14px !important;
+  }
 }

@@ -110,11 +110,7 @@ footer .social_icon svg:hover path {
   fill: #0e76a8;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 480px) {
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
+/* Responsive styles */
 @media (max-width: 1100px) {
   footer .footer_top_part .footer_top_column.first {
     width: 65%;
@@ -143,7 +139,7 @@ footer .social_icon svg:hover path {
     font-size: 13px;
   }
 }
-/* Large devices (desktops, 992px and up) */
+
 @media (max-width: 992px) {
   footer {
     padding: 65px 40px 40px 40px !important;
@@ -159,11 +155,8 @@ footer .social_icon svg:hover path {
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
 }
-
-/* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   footer {
     padding: 55px 20px 20px 20px !important;
@@ -190,7 +183,7 @@ footer .social_icon svg:hover path {
   footer .footer_top_column.third .contact_info .line {
     margin-top: 15px;
     margin-bottom: 15px;
-}
+  }
   footer .footer_bottom_part .desclimar {
     font-size: 12px;
     font-weight: 400;

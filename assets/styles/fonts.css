@@ -1,5 +1,5 @@
 /* Fonts */
-@font-face {
+/* @font-face {
     font-family: "Nantes";
     src: url("Nantes-Bold.eot");
     src: local("Nantes Bold"), local("Nantes-Bold"),
@@ -33,7 +33,7 @@
       url("Nantes-LightItalic.ttf") format("truetype");
     font-weight: 300;
     font-style: italic;
-  }
+  } */
   
   @font-face {
     font-family: "Nantes";
@@ -60,7 +60,7 @@
     font-style: italic;
   }
   
-  @font-face {
+  /* @font-face {
     font-family: "Nantes";
     src: url("Nantes-RegularItalic.eot");
     src: local("Nantes Regular Italic"), local("Nantes-RegularItalic"),
@@ -70,10 +70,10 @@
       url("Nantes-RegularItalic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
-  }
+  } */
   /* *---------* */
   
-  @font-face {
+  /* @font-face {
     font-family: "Messina Sans Book";
     src: url("MessinaSans-Book.eot");
     src: local("Messina Sans Book"), local("MessinaSans-Book"),
@@ -204,7 +204,7 @@
       url("MessinaSans-RegularItalic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
-  }
+  } */
   
   @font-face {
     font-family: "Messina Sans";

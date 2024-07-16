@@ -315,6 +315,19 @@ section.wppool_slider {
     align-items: start;
     flex-direction: column;
   }
+  .nav_and_pagination .custom-pagination .current_and_next_container {
+    width: 50px;
+    border-right: 50% !important;
+  }
+  .custom-pagination .current_and_next_container span#and {
+    display: none;
+  }
+  .custom-pagination .current_and_next_container span#next-slide {
+    display: none;
+  }
+  .custom-pagination .current_and_next_container .icon {
+    display: none;
+  }
   .custom_slider_nav .report_export {
     margin-top: 10px;
   }

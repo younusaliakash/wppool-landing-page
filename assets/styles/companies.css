@@ -27,11 +27,7 @@
 }
 
 /* Responsive Style */
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 480px) {
-}
 
-/* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1100px) {
   .portfolio_companies .portfolio_companies_info {
     gap: 16px;
@@ -67,7 +63,7 @@
     width: 125px !important;
   }
 }
-/* Medium devices (tablets, 768px and up) */
+
 @media (max-width: 768px) {
   .portfolio_companies .portfolio_companies_info {
     grid-template-columns: repeat(3, 1fr) !important;
@@ -84,8 +80,10 @@
   }
   .portfolio_companies .company_name_with_logo {
     height: 80px !important;
+  }
+  .portfolio_companies .company_name_with_logo img {
+    width: 95px !important;
+  }
 }
-.portfolio_companies .company_name_with_logo img {
-  width: 95px !important;
-}
+@media (max-width: 480px) {
 }

@@ -157,32 +157,13 @@ th:nth-child(1) {
   width: 201px;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 480px) {
-}
-
-/* Small devices (landscape phones, 576px and up) */
-/* @media (max-width: 576px) {
-  .all_companies_data_container .data_container_top_bar {
-    padding: 20px 20px 20px 20px !important;
-}
-.all_companies_data_container .container_header h2 {
-  font-size: 32px !important;
-}
-} */
-
-/* Medium devices (tablets, 768px and up) */
-/* @media (max-width: 768px) {
-} */
-
-/* Extra large devices (large desktops, 1200px and up) */
+/* Responsive Style */
 @media (max-width: 1100px) {
   .all_companies_data_container .container_header h2 {
     font-size: 45px;
   }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
   .all_companies_data_container .data_container_top_bar {
     padding: 30px 30px 30px 30px;
@@ -214,7 +195,7 @@ th:nth-child(1) {
     font-size: 14px;
   }
 }
-/* Small devices (landscape phones, 576px and up) */
+
 @media (max-width: 576px) {
   .all_companies_data_container .data_container_top_bar {
     padding: 20px 20px 20px 20px !important;
@@ -225,6 +206,12 @@ th:nth-child(1) {
   .all_companies_data_container .container_header .search_bar {
     height: 40px !important;
     padding: 10px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+  .all_companies_data_container .container_header {
+    align-items: start;
+    flex-direction: column;
   }
   .all_companies_data_container .search_bar img {
     height: 20px !important;
